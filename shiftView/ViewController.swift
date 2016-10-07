@@ -56,7 +56,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func keyboardWillShow(notification: NSNotification){
         print(self.view.frame.origin.y)
         print(self.view.frame.origin.x)
+        
+        //View will slide 20px up -> self.view.frame.origin.y -= 20
         self.view.frame.origin.y -= getKeyboardHeight(notification)
+        
         print("afterwards calculation, new view.frame.origin.y is \(self.view.frame.origin.y)")
         print("afterwards calculation, new view.frame.origin.y is \(self.view.frame.origin.x)")
     }
